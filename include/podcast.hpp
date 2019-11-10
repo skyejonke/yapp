@@ -14,6 +14,7 @@ class podcast{
 		episode* getEpisode(int numIn);
 		podcast(const std::string urlIn);
 		std::string getPath();
+		int getEpisodeCount();
 
 
 	private:

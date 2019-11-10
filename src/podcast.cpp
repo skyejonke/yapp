@@ -40,8 +40,8 @@ podcast::podcast(const std::string urlIn){
 std::string podcast::getName(){
 	return name;
 }
-std::vector<episode*> podcast::getEpisodes(){
-	return episodes;
+int podcast::getEpisodeCount(){
+	return episodes.size();
 }
 episode* podcast::getEpisode(int numIn){
 	return episodes[numIn];
