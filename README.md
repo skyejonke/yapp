@@ -23,3 +23,11 @@ You ***must*** be on linux for this application to work. You also need the follo
 - pugixml
 
 pugixml and libmpv are provided as git submodules
+
+From there just run
+
+```bash
+cmake .
+make
+./yapp
+```
