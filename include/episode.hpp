@@ -10,7 +10,8 @@ class episode{
 		std::string getUrl();
 		std::string getPath();
 		void setPath(std::string pathIn);
-		int getSpot;
+		int64_t* getSpot();
+		void setSpot(int64_t *spotIn);
 		episode(const std::string urlIn, const std::string epTitleIn, const int epNumIn, podcast *podIn);
 		void download();
 		std::string getTitle();
@@ -19,7 +20,7 @@ class episode{
 	private:
 		std::string url;
 		std::string title;
-		int spot;
+		int64_t *spot;
 		int num;
 		podcast *pod;
 		bool downloaded = false;

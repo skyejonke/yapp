@@ -8,6 +8,7 @@ episode::episode(const std::string urlIn, const std::string epTitleIn, const int
 	title = epTitleIn;
 	num = epNumIn;
 	pod = podIn;
+	spot = 0;
 	//epPath = "ERROR";
 }
 
@@ -20,7 +21,7 @@ void episode::download(){
 	skyelib::replace(path,"<pod>",pod->getPath());
 	skyelib::replace(path,"<num>",std::to_string(num));
 	setPath(path);
-	system(cmd.c_str());
+	//system(cmd.c_str());
 	downloaded=true;
 }
 
@@ -32,4 +33,10 @@ std::string episode::getPath(){
 }
 void episode::setPath(std::string pathIn){
 	epPath = pathIn;
+}
+int64_t* episode::getSpot(){
+	return spot;
+}
+void episode::setSpot(int64_t *spotIn){
+	spot = spotIn;
 }

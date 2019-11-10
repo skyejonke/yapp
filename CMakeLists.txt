@@ -12,5 +12,5 @@ find_package( OpenCV REQUIRED )
 
 project (yapp)
 add_executable(yapp src/yapp.cpp src/episode.cpp src/podcast.cpp src/ui.cpp src/player.cpp)
-target_link_libraries(yapp ncurses ${OpenCV_LIBS} pugixml skyelib)
+target_link_libraries(yapp ncurses ${OpenCV_LIBS} pugixml skyelib mpv)
 
