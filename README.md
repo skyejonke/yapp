@@ -21,8 +21,10 @@ You ***must*** be on linux for this application to work. You also need the follo
 - git
 - libmpv
 - pugixml
+- libopencv
+- skyelib
 
-pugixml and libmpv are provided as git submodules
+pugixml, libmpv, and skyelib are provided as git submodules
 
 From there just run
 
