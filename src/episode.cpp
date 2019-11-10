@@ -21,7 +21,7 @@ void episode::download(){
 	skyelib::replace(path,"<pod>",pod->getPath());
 	skyelib::replace(path,"<num>",std::to_string(num));
 	setPath(path);
-	//system(cmd.c_str());
+	system(cmd.c_str());
 	downloaded=true;
 }
 
