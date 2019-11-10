@@ -35,20 +35,26 @@ int main(){
 	}
 	int num;
 	std::cin >> num;
-	for (int i = 0; i < podcasts[num]->getEpisodeCount();i++){
-		std::cout << i << ": ";
-		std::cout << podcasts[num]->getEpisode(i)->getTitle()
-			<< std::endl;
+	done = false;
+	while (!done){
+		for (int i = 0; i < podcasts[num]->getEpisodeCount();i++){
+			//std::cout << i << ": ";
+			std::cout << podcasts[num]->getEpisode(i)->getTitle()
+				<< std::endl;
+		}
+		std::cout << "Input an episode number, or input \"done\" to end the session." << std::endl;
+		std::string num2;
+		std::cin >> num2;
+		if (num2 == "done"){
+			done = true;
+		}
+		else{
+
+			podcasts[num]->getEpisode(std::stoi(num2))->download();
+			player* play = new player(podcasts[num]->getEpisode(std::stoi(num2)));
+		}
 	}
-	std::cout << "Input an episode number!" << std::endl;
-	int num2;
-	std::cin >> num2;
-	podcasts[num]->getEpisode(num2)->download();
-	player* play = new player(podcasts[num]->getEpisode(num2));
-	//	ui* term = new ui();
-//	term->start();
-//	initscr();
-//	endwin();
+
 
 	return 0;
 }
