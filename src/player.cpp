@@ -54,7 +54,6 @@ player::player(episode* ep){
     skyelib::replace(dir,"<path>",ep->getPath());
     //std::string spt = "seek " + std::to_string(spot) + " absolute";
     const char *cmd[] = {"loadfile", dir.c_str() , NULL};
-3
     check_error(mpv_command(ctx, cmd));
 //    check_error(mpv_command(ctx, cma));
 
@@ -72,7 +71,7 @@ player::player(episode* ep){
 		//ep->setSpot(mpv_get_time_pos(mpv_handle *ctx));
             break;
 	    }
-	mpv_terminate_destroy(ctx);
 }
+	mpv_terminate_destroy(ctx);
 }
 
