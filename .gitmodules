@@ -3,7 +3,7 @@
 	url = https://github.com/zeux/pugixml.git
 [submodule "skyelib"]
 	path = skyelib
-	url = git@codeberg.org:biribiri/skyelib.git
+	url = https://github.com/skyejonke/skyelib.git
 [submodule "mpv"]
 	path = mpv
 	url = https://github.com/mpv-player/mpv.git
