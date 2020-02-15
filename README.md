@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/skyejonke/yapp.svg?branch=master)](https://travis-ci.com/skyejonke/yapp)
 # Yet Another Podcast Player
 
 Finally, a podcast player that just works.
